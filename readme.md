@@ -207,7 +207,7 @@ If you get stuck you might want to look at the documentation for these methods.
 
 
 
-#2) ActiveRecord
+## 2) ActiveRecord
 
 Okay, you've survived the onslaught of Array questions. Hopefully you've got some awesome array methods under your belt and you're ready to tackle ActiveRecord. Like we did last time we're going to be using tests.
 
