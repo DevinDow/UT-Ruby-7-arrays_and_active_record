@@ -23,7 +23,7 @@ class ActiveRecordTest < Test::Unit::TestCase
     dealership = nil
     name = "Fake Name"
     d    = Dealership.create(:name => name)
-    # put your code here
+    dealership = Dealership.where(:name => name).first
     assert_equal d, dealership
   end
 
@@ -33,6 +33,7 @@ class ActiveRecordTest < Test::Unit::TestCase
   # use the `group` & `count` methods
   # assign to variable `color_group`
   def test_select
+    omit
     color_group = {}
     cars = []
     3.times do
@@ -45,6 +46,7 @@ class ActiveRecordTest < Test::Unit::TestCase
   # Use the `LIKE` operator in SQL to find all cars with conditions that contain "good"
   # assign to `your_cars` variable
   def test_like
+    omit
     your_cars = []
     cars = []
     cars << Car.create(:condition => "goodish")
@@ -61,6 +63,7 @@ class ActiveRecordTest < Test::Unit::TestCase
   # the variable of `ids` holds an array of all of the dealership's id's
   # assign to variable dealerships
   def test_in
+    omit
     dealerships = nil
     dealerz = 3.times.map { Dealership.create(:name => Faker::Company.name) }
     ids     = dealerz.map {|d| d.id }
@@ -73,6 +76,7 @@ class ActiveRecordTest < Test::Unit::TestCase
   # remember time is ever increasing in a positive direction, how do you want to order ASC or DESC?
   # assign to a variable reverse_cars
   def test_order
+    omit
     reverse_cars = []
     cars = 5.times.map {Car.create}
     # put your code here
@@ -83,6 +87,7 @@ class ActiveRecordTest < Test::Unit::TestCase
   # find the first 4 cars
   # assign to variable `limited_cars`
   def test_limit
+    omit
     limited_cars = nil
     cars = 5.times.map { Car.create }
     # put your code here
@@ -92,6 +97,7 @@ class ActiveRecordTest < Test::Unit::TestCase
   # find the second and third cars, using offset and limit methods
   # assign to variable `offset_cars`
   def test_offset
+    omit
     offset_cars = nil
     cars = 5.times.map {Car.create}
     # put your code here
@@ -104,6 +110,7 @@ class ActiveRecordTest < Test::Unit::TestCase
   # use joins
   # assign to variable `dealerships`
   def test_joins
+    omit
     dealerships = nil
     dealerz = []
     3.times do
@@ -125,6 +132,7 @@ class ActiveRecordTest < Test::Unit::TestCase
   # use >= for a greater than or equal comparison
   # assign to variable `dealerships`
   def test_having
+    omit
     dealerships = []
     dealerz = []
     color = "liger yellow"

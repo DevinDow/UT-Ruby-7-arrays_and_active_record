@@ -30,7 +30,10 @@ https://ruby-doc.org/core-2.5.1/String.html#method-i-upcase
 
 0) Link to Rail's ActiveRecord querying conditions 
 https://api.rubyonrails.org/classes/ActiveRecord/Base.html
+https://guides.rubyonrails.org/active_record_querying.html#conditions
 
 1) Link from APIdock to Rail's ActiveRecord querying conditions  
+https://apidock.com/rails/ActiveRecord/Base
 
-2) 
+2) Rails Guide
+https://guides.rubyonrails.org
