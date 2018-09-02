@@ -9,21 +9,21 @@ describe "Hash" do
 
     # change the assertion to true
     it "tests logic" do
-      assert false
+      assert true
     end
 
     # assign to `value` variable
     it "pulls a single value out of a hash" do
       value = ""
       hash = {:name => "richard"}
-      # put your code here
+      value = hash[:name]
       assert_equal "richard", value
     end
 
     # assign to `hash` variable
     it "add an element to a hash" do
       hash = {:name => "richard"}
-      # put your code here
+      hash[:movie] = "zoolander"
       assert_equal({:name => "richard", :movie => 'zoolander'}, hash)
     end
 
@@ -31,7 +31,7 @@ describe "Hash" do
     it "find all the keys in a hash" do
       keys = []
       hash = {:name => "richard", :movie => 'zoolander'}
-      # put your code here
+      keys = hash.keys()      
       assert_equal [:name, :movie], keys
     end
 
@@ -39,14 +39,14 @@ describe "Hash" do
     it "find all the values in a hash" do
       values = []
       hash = {:name => "richard", :movie => 'zoolander'}
-      # put your code here
+      values = hash.values
       assert_equal ["richard", "zoolander"], values
     end
 
     # assign to the `hash` variable
     it "removes a key value pair from a hash" do
       hash = {:name => "richard", :movie => 'zoolander'}
-      # put your code here
+      hash.delete(:movie)
       assert_equal({:name => "richard"}, hash)
     end
 
@@ -55,7 +55,7 @@ describe "Hash" do
     it "combines two hashes" do
       hash        = {:name => "richard"}
       second_hash = {:movie => 'zoolander'}
-      # put your code here
+      hash.merge!(second_hash)
       assert_equal({:name => "richard", :movie => 'zoolander'}, hash)
     end
 
@@ -68,10 +68,10 @@ describe "Hash" do
     #      [["a", 1], ["b", 2]]each_with_object({}) {|item, hash| hash[item.last] = item.first}
     #      => {1=>"a", 2=>"b"}
     it "can be built from an array of arrays" do
-    hash = {}
-    array = [["name", "richard"], ["movie", "zoolander"]]
-    # put your code here
-    assert_equal({"name"=>"richard", "movie"=>"zoolander"}, hash)
+      hash = {}
+      array = [["name", "richard"], ["movie", "zoolander"]]
+      array.each_with_object({}) {|item| hash[item[0].to_s] = item[1].to_s}
+      assert_equal({"name"=>"richard", "movie"=>"zoolander"}, hash)
     end
   end
 end

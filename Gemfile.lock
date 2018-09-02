@@ -18,6 +18,7 @@ GEM
     ffaker (2.10.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    minitest (5.11.3)
     multi_json (1.13.1)
     power_assert (1.1.3)
     sqlite3 (1.3.13)
@@ -33,6 +34,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (= 3.2.6)
   ffaker
+  minitest
   sqlite3
   test-unit
 

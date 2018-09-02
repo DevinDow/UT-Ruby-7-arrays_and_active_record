@@ -7,3 +7,5 @@ gem 'ffaker'
 gem "test-unit"
 
 gem 'sqlite3'
+
+gem "minitest"
